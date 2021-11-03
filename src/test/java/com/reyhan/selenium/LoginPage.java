@@ -11,6 +11,7 @@ public class LoginPage {
     By byEmail = By.id("LoginEmail");
     By byPass = By.id("Password");
     By byButton = By.id("loginLink");
+    By byLoginName=By.className("dropdown-label");
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -39,9 +40,9 @@ public class LoginPage {
     }
 
     public String loginControl(){
-        String byLoginControl = driver.findElement(By.xpath("//*[@id=\"header__container\"]/div/div[2]/div/div[2]/div/div[1]/button/span")).getText();
+        String byLoginControl = driver.findElement(byLoginName).getText();
 
-        
+
         return byLoginControl;
 
     }
