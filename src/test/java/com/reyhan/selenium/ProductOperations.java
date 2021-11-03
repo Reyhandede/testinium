@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-import java.util.Random;
+
 
 public class ProductOperations {
 
@@ -26,6 +26,7 @@ public class ProductOperations {
     }
 
     public void setSearchWord(String searchWord) {
+        driver.findElement(bySearch).click();
         this.searchWord = searchWord;
     }
 
